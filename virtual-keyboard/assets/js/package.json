@@ -1,0 +1,19 @@
+{
+  "name": "vkey-script",
+  "version": "1.0.0",
+  "description": "virtual keyboard script for rss task",
+  "main": "index.js",
+  "scripts": {
+    "test": "run test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Glebokie/RSS-Virtual-Keyboard.git"
+  },
+  "author": "Glebokie",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Glebokie/RSS-Virtual-Keyboard/issues"
+  },
+  "homepage": "https://github.com/Glebokie/RSS-Virtual-Keyboard#readme"
+}
