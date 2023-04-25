@@ -80,20 +80,28 @@ h1, h2, h3, h4, h5, h6 {
 .keyboard__container {
   background-color: #555555;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  row-gap: 5px;
+  padding: 10px 10px;
+  max-width: 500px;
 }
 .keyboard__row {
-  padding: 5px;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   gap: 5px;
 }
 .keyboard__key {
+  cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex: 1 1;
   background-color: #ffffff;
-  min-width: 30px;
   height: 30px;
   padding: 5px;
   border-radius: 5%;
+}
+.keyboard__key_space {
+  flex-grow: 6.5;
 }

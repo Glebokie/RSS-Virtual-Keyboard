@@ -173,4 +173,220 @@ export const keys = [
     "tag": "div",
     
 },
+{
+    "key": "Caps Lock",
+    "class": "keyboard__key",
+    "tag": "div",
+    
+},
+{
+    "key": "a",
+    "class": "keyboard__key",
+    "tag": "div",
+    
+},
+{
+    "key": "s",
+    "class": "keyboard__key",
+    "tag": "div",
+    
+},
+{
+    "key": "d",
+    "class": "keyboard__key",
+    "tag": "div",
+    
+},
+{
+    "key": "f",
+    "class": "keyboard__key",
+    "tag": "div",
+    
+},
+{
+    "key": "g",
+    "class": "keyboard__key",
+    "tag": "div",
+    
+},
+{
+    "key": "h",
+    "class": "keyboard__key",
+    "tag": "div",
+    
+},
+{
+    "key": "j",
+    "class": "keyboard__key",
+    "tag": "div",
+    
+},
+{
+    "key": "k",
+    "class": "keyboard__key",
+    "tag": "div",
+    
+},
+{
+    "key": "l",
+    "class": "keyboard__key",
+    "tag": "div",
+    
+},
+{
+    "key": ";",
+    "class": "keyboard__key",
+    "tag": "div",
+    
+},
+{
+    "key": "'",
+    "class": "keyboard__key",
+    "tag": "div",
+    
+},
+{
+    "key": "Enter",
+    "class": "keyboard__key",
+    "tag": "div",
+    
+},
+{
+    "key": "Shift",
+    "class": "keyboard__key",
+    "tag": "div",
+    
+},
+{
+    "key": "\\",
+    "class": "keyboard__key",
+    "tag": "div",
+    
+},
+{
+    "key": "z",
+    "class": "keyboard__key",
+    "tag": "div",
+    
+},
+{
+    "key": "x",
+    "class": "keyboard__key",
+    "tag": "div",
+    
+},
+{
+    "key": "c",
+    "class": "keyboard__key",
+    "tag": "div",
+    
+},
+{
+    "key": "v",
+    "class": "keyboard__key",
+    "tag": "div",
+    
+},
+{
+    "key": "b",
+    "class": "keyboard__key",
+    "tag": "div",
+    
+},
+{
+    "key": "n",
+    "class": "keyboard__key",
+    "tag": "div",
+    
+},
+{
+    "key": "m",
+    "class": "keyboard__key",
+    "tag": "div",
+    
+},
+{
+    "key": ".",
+    "class": "keyboard__key",
+    "tag": "div",
+    
+},
+{
+    "key": ",",
+    "class": "keyboard__key",
+    "tag": "div",
+    
+},
+{
+    "key": "/",
+    "class": "keyboard__key",
+    "tag": "div",
+    
+},
+{
+    "key": "\u2191",
+    "class": "keyboard__key",
+    "tag": "div",
+    
+},
+{
+    "key": "Shift",
+    "class": "keyboard__key",
+    "tag": "div",
+    
+},
+{
+    "key": "Ctrl",
+    "class": "keyboard__key",
+    "tag": "div",
+    
+},
+{
+    "key": "Win",
+    "class": "keyboard__key",
+    "tag": "div",
+    
+},
+{
+    "key": "Alt",
+    "class": "keyboard__key",
+    "tag": "div",
+    
+},
+{
+    "key": " ",
+    "class": "keyboard__key",
+    "tag": "div",
+    "subclass": "keyboard__key_space",
+},
+{
+    "key": "Alt",
+    "class": "keyboard__key",
+    "tag": "div",
+    
+},
+{
+    "key": "Ctrl",
+    "class": "keyboard__key",
+    "tag": "div",
+    
+},
+{
+    "key": "\u2190",
+    "class": "keyboard__key",
+    "tag": "div",
+    
+},
+{
+    "key": "\u2193",
+    "class": "keyboard__key",
+    "tag": "div",
+    "subclass": "keyboard__key_arrow-down",
+},
+{
+    "key": "\u2192",
+    "class": "keyboard__key",
+    "tag": "div",
+    "subclass": "keyboard__key_arrow-right",
+},
 ]

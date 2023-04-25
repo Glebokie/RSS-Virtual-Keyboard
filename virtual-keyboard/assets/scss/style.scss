@@ -12,26 +12,36 @@
 &__container{
 	background-color: #555555;
 	margin: 0 auto;
-	
+	display: flex;
+	flex-direction: column;
+	row-gap: 5px;
+	padding: 10px 10px;
+	max-width: 500px;
 }
 
 &__row{
-	padding: 5px;
 	display: flex;
-	justify-content: center;
+	justify-content:space-around;
 	gap: 5px;
 }
 
 &__key{
+	cursor: pointer;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	flex: 1 1;
 	background-color: #ffffff;
-	min-width: 30px;
+	//min-width: 30px;
 	height: 30px;
 	padding: 5px;
 	border-radius:5%;
 	
+	&_space{
+	flex-grow: 6.5;
+		
+	}
 }
 
 }
+
