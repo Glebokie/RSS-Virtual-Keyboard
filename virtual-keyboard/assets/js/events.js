@@ -16,6 +16,7 @@ export function getEvents(buttons, rows, component, wrapper, cardContainer,texta
 
 
     buttons.forEach(button => {
+        if(button.classList.value === 'keyboard__key'){
         button.addEventListener('mousedown', function(e){
           let key = keys.find(item => item.key === button.innerText);
           if(capsLockKey.classList.contains('active')){
@@ -25,7 +26,7 @@ export function getEvents(buttons, rows, component, wrapper, cardContainer,texta
           }
           button.classList.add('active');
         });
-        
+    }
         button.addEventListener('mouseup', function(e){
           button.classList.remove('active');
           setTimeout(()=>{
