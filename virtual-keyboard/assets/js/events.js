@@ -1,6 +1,5 @@
 export function getEvents(buttons, rows, component, wrapper, cardContainer,textarea,keys){
     let spaceKey = buttons[59];
-    let capsLockKey = buttons[29];
     let shiftRightKey = buttons[55];
     let shiftLeftKey = buttons[42];
     let ctrlRightKey = buttons[61];
@@ -12,8 +11,15 @@ export function getEvents(buttons, rows, component, wrapper, cardContainer,texta
     let deleteKey = buttons[28];
     let tabKey = buttons[14]
     let backspaceKey = buttons[13]
-    console.log(shiftLeftKey)
-
+    let capsLockKey = buttons[29];
+    window.onload = function() {
+        textarea.focus();
+        textarea.addEventListener("blur", function(event) {
+          event.preventDefault();
+          textarea.focus();
+        });
+      };
+    
 
     buttons.forEach(button => {
         if(button.classList.value === 'keyboard__key'){
@@ -26,14 +32,7 @@ export function getEvents(buttons, rows, component, wrapper, cardContainer,texta
           }
           button.classList.add('active');
         });
-    }
-        button.addEventListener('mouseup', function(e){
-          button.classList.remove('active');
-          setTimeout(()=>{
-            button.classList.remove('remove');
-          },200);
-        });
-      });
+    } });
       
       capsLockKey.addEventListener('click', function(e){
         capsLockKey.classList.toggle('active');
@@ -89,13 +88,14 @@ export function getEvents(buttons, rows, component, wrapper, cardContainer,texta
       
       window.addEventListener('mouseup', function(e){
         buttons.forEach(button => {
-          button.classList.remove('active');
+            if(button.classList.value === 'keyboard__key active'){
+          button.classList.remove('active');}
           setTimeout(()=>{
             button.classList.remove('remove');
           },200);
         });
         
-       
+
         spaceKey.classList.remove('active');
         spaceKey.classList.remove('remove');
         shiftRightKey.classList.remove('active');
@@ -161,6 +161,7 @@ window.addEventListener('keydown', function(e){
         }
         if(e.code == 'Tab') {
             tabKey.classList.add('active')
+            e.preventDefault();
         }
         if(e.code == 'Backspace') {
             backspaceKey.classList.add('active')
