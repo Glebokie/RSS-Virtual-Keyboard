@@ -73,9 +73,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /*--------------------*/
+.keyboard {
+  transition: 0.2s;
+}
 .keyboard__wrapper {
   max-width: 100%;
   overflow: hidden;
+  position: relative;
 }
 .keyboard__container {
   background-color: #555555;
@@ -84,7 +88,7 @@ h1, h2, h3, h4, h5, h6 {
   flex-direction: column;
   row-gap: 5px;
   padding: 10px 10px;
-  max-width: 50%;
+  max-width: 100%;
 }
 .keyboard__row {
   display: flex;
@@ -100,8 +104,48 @@ h1, h2, h3, h4, h5, h6 {
   background-color: #ffffff;
   height: 30px;
   padding: 5px;
-  border-radius: 5%;
+  border-radius: 3%;
+  transition: 0.2s;
 }
 .keyboard__key_space {
   flex-grow: 6.5;
+}
+.keyboard__textarea {
+  outline: none;
+  max-width: 100%;
+  transition: 0.2s;
+}
+
+.keyboard__key.active {
+  outline: 3px solid #7bff00;
+  outline-offset: -3px;
+  color: #7bff00;
+}
+
+.keyboard__key.remove {
+  animation: keys_animation 0.5s linear;
+}
+
+@keyframes keys_animation {
+  0% {
+    outline: 3px solid #7bff00;
+    outline-offset: -3px;
+    color: #7bff00;
+  }
+  100% {
+    outline: none;
+    outline-offset: 0;
+    color: #000;
+  }
+}
+.keyboard__span_alt {
+  display: none;
+}
+
+.keyboard__span_alt.active {
+  display: block;
+}
+
+.keyboard__span.remove {
+  display: none;
 }

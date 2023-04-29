@@ -3,10 +3,11 @@
 //
 
 .keyboard {
-
+	transition: .2s;
 &__wrapper{
 	max-width: 100%;
 	overflow: hidden;
+	position: relative;
 }
 
 &__container{
@@ -16,7 +17,8 @@
 	flex-direction: column;
 	row-gap: 5px;
 	padding: 10px 10px;
-	max-width: 50%;
+	max-width: 100%;
+	
 }
 
 &__row{
@@ -35,7 +37,8 @@
 	//min-width: 30px;
 	height: 30px;
 	padding: 5px;
-	border-radius:5%;
+	border-radius:3%;
+	transition: .2s;
 	
 	&_space{
 	flex-grow: 6.5;
@@ -43,5 +46,44 @@
 	}
 }
 
+&__textarea{
+	outline: none;
+	max-width: 100%;
+	transition: .2s;
+	
 }
 
+}
+
+.keyboard__key.active{
+	outline: 3px solid #7bff00;
+	outline-offset: -3px;
+	color: #7bff00;
+}
+.keyboard__key.remove{
+	animation: keys_animation 0.5s linear ;
+}
+
+@keyframes keys_animation {
+	0% {
+		outline: 3px solid #7bff00;
+		outline-offset: -3px;
+		color: #7bff00;
+	}
+	100% {
+		outline: none;
+		outline-offset: 0;
+		color: #000;
+	}
+}
+
+.keyboard__span_alt{
+	display: none;
+}
+.keyboard__span_alt.active{
+	display: block;
+}
+
+.keyboard__span.remove{
+	display: none;
+}

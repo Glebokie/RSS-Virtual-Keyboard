@@ -81,12 +81,14 @@ export const keys = [
     "key": "Backspace",
     "class": "keyboard__key",
     "tag": "div",
+    "subclass": "keyboard__key_backspace",
     
 },
 {
     "key": "Tab",
     "class": "keyboard__key",
     "tag": "div",
+    "subclass": "keyboard__key_tab",
     
 },
 {
@@ -171,13 +173,14 @@ export const keys = [
     "key": "Del",
     "class": "keyboard__key",
     "tag": "div",
+    "subclass": "keyboard__key_delete",
     
 },
 {
     "key": "Caps Lock",
     "class": "keyboard__key",
     "tag": "div",
-    
+    "subclass": "keyboard__key_caps-lock",
 },
 {
     "key": "a",
@@ -249,12 +252,14 @@ export const keys = [
     "key": "Enter",
     "class": "keyboard__key",
     "tag": "div",
+    "subclass": "keyboard__key_enter",
     
 },
 {
     "key": "Shift",
     "class": "keyboard__key",
     "tag": "div",
+    "subclass": "keyboard__key_shift-left",
     
 },
 {
@@ -327,30 +332,34 @@ export const keys = [
     "key": "\u2191",
     "class": "keyboard__key",
     "tag": "div",
-    
+    "subclass": "keyboard__key_arrow-up",
 },
 {
     "key": "Shift",
     "class": "keyboard__key",
     "tag": "div",
+    "subclass": "keyboard__key_shift-right",
     
 },
 {
     "key": "Ctrl",
     "class": "keyboard__key",
     "tag": "div",
+    "subclass": "keyboard__key_ctrl-left",
     
 },
 {
     "key": "Win",
     "class": "keyboard__key",
     "tag": "div",
+    "subclass": "keyboard__key_win",
     
 },
 {
     "key": "Alt",
     "class": "keyboard__key",
     "tag": "div",
+    "subclass": "keyboard__key_alt-left",
     
 },
 {
@@ -363,19 +372,20 @@ export const keys = [
     "key": "Alt",
     "class": "keyboard__key",
     "tag": "div",
+    "subclass": "keyboard__key_alt-right",
     
 },
 {
     "key": "Ctrl",
     "class": "keyboard__key",
     "tag": "div",
-    
+    "subclass": "keyboard__key_ctrl-right",
 },
 {
     "key": "\u2190",
     "class": "keyboard__key",
     "tag": "div",
-    
+    "subclass": "keyboard__key_arrow-left",
 },
 {
     "key": "\u2193",

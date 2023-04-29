@@ -1,3 +1,5 @@
+import { getEvents } from "./events.js";
+
 const cssClasses = {
     WRAPPER: 'keyboard__wrapper',
     CONTAINER: 'keyboard__container',
@@ -11,7 +13,6 @@ const cssClasses = {
 }
 
 export function getStructure(keys) {
-    console.log(keys)
     if(!Array.isArray(keys)){
         throw TypeError('Virtual keyboard error. Keys array is invalid')
     }
@@ -31,22 +32,22 @@ export function getStructure(keys) {
      };
     const buttons = [];
     for(let i = 0; i < 14; i++){
-       let button = createElement(keys[i].tag, keys[i].class, keys[i].key, keys[i].altKey);
+       let button = createElement(keys[i].tag, keys[i].class, keys[i].key, keys[i].altKey, keys[i].subclass);
         buttons.push(button);
        rows[0].append(buttons[i])
     }
     for(let i = 14; i < 29; i++){
-        let button = createElement(keys[i].tag, keys[i].class, keys[i].key, keys[i].altKey);
+        let button = createElement(keys[i].tag, keys[i].class, keys[i].key, keys[i].altKey, keys[i].subclass);
          buttons.push(button);
         rows[1].append(buttons[i])
      }
      for(let i = 29; i < 42; i++){
-        let button = createElement(keys[i].tag, keys[i].class, keys[i].key, keys[i].altKey);
+        let button = createElement(keys[i].tag, keys[i].class, keys[i].key, keys[i].altKey, keys[i].subclass);
          buttons.push(button);
         rows[2].append(buttons[i])
      }
      for(let i = 42; i < 56; i++){
-        let button = createElement(keys[i].tag, keys[i].class, keys[i].key, keys[i].altKey);
+        let button = createElement(keys[i].tag, keys[i].class, keys[i].key, keys[i].altKey, keys[i].subclass);
          buttons.push(button);
         rows[3].append(buttons[i])
      }
@@ -55,6 +56,7 @@ export function getStructure(keys) {
          buttons.push(button);
         rows[4].append(buttons[i])
      }
+    getEvents(buttons, rows, component, wrapper, cardContainer,textarea,keys)
     return component;
 }
 
@@ -74,6 +76,7 @@ function createElement(tagName, className , innerText = '', altKey = '', subclas
         keyboardSpan.innerText = innerText //innerText[0].toUpperCase() + innerText.slice(1);
         
     }
+    
     return element;
 }
 
