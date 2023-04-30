@@ -12,7 +12,7 @@ export function getEvents(buttons, rows, component, wrapper, cardContainer,texta
     let tabKey = buttons[14]
     let backspaceKey = buttons[13]
     let capsLockKey = buttons[29];
-    
+    textarea.readOnly = true;
     buttons.forEach(button => {
         if(button.classList.value === 'keyboard__key'){
         button.addEventListener('mousedown', function(e){
@@ -135,25 +135,39 @@ window.addEventListener('keydown', function(e){
             else { textarea.value += key.key}
             buttons[i].classList.add('active')
         }
-        
-        if(e.code == 'CapsLock') {
-          if( capsLockKey.classList.contains('active') === false) {
+        if(e.code == 'ShiftLeft' || e.code == 'ShiftRight' ) {
+          let altKey = document.querySelectorAll('.keyboard__span_alt');
+          let mainKey = document.querySelectorAll('.keyboard__span');
+          altKey.forEach(key => {
+           key.classList.add('active');
+          });
+          mainKey.forEach(key => {
+           key.classList.add('remove');
+          })
+         }
+         if(e.code == 'CapsLock') {
+          if(capsLockKey.classList.contains('active') === false) {
             buttons.forEach(button => {
-              if(button.classList.value === 'keyboard__key'){
-              let key = keys.find(item => item.key == button.innerText);
-              button.innerText = key.key.toUpperCase();
+              if(button.classList.value === 'keyboard__key') {
+                let spans = button.querySelectorAll('.keyboard__span');
+                spans.forEach(span => {
+                  let key = keys.find(item => item.key == span.innerText.toLowerCase());
+                  span.innerText = key.key.toUpperCase();
+                });
               } 
             }); 
-          }  else if( capsLockKey.classList.contains('active') === true) {
+          } else if(capsLockKey.classList.contains('active') === true) {
             buttons.forEach(button => {
               if(button.classList.value === 'keyboard__key'){
-              let key = keys.find(item => item.key == button.innerText.toLowerCase());
-              button.innerText = key.key.toLowerCase();
+                let spans = button.querySelectorAll('.keyboard__span'); 
+                spans.forEach(span => {
+                  let key = keys.find(item => item.key == span.innerText.toLowerCase());
+                  span.innerText = key.key.toLowerCase();
+                });
               } 
             }); 
           }  
-            capsLockKey.classList.toggle('active')
-          
+          capsLockKey.classList.toggle('active')
         }
         if(e.code == 'Space') {
             spaceKey.classList.add('active')
@@ -193,11 +207,23 @@ window.addEventListener('keydown', function(e){
             backspaceKey.classList.add('active')
         }
        
-        console.log(e.code)
+        
     }
 })
 window.addEventListener('keyup', function(e){
     for(let i = 0; i< buttons.length; i++) {
+      if(e.code == 'ShiftLeft' || e.code == 'ShiftRight' ) {
+        let altKey = document.querySelectorAll('.keyboard__span_alt');
+        let mainKey = document.querySelectorAll('.keyboard__span');
+         altKey.forEach(key => {
+          key.classList.remove('active');
+         });
+         mainKey.forEach(key => {
+          key.classList.remove('remove');
+         })
+      }
+
+
         if(e.key === buttons[i].innerText.toLowerCase() || e.key === buttons[i].innerText.toUpperCase()){
             buttons[i].classList.remove('active')
             buttons[i].classList.add('remove')

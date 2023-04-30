@@ -146,6 +146,6 @@ h1, h2, h3, h4, h5, h6 {
   display: block;
 }
 
-.keyboard__span.remove {
+.keyboard__span_alt + .keyboard__span.remove {
   display: none;
 }
