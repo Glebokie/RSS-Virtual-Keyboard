@@ -12,19 +12,11 @@ export function getEvents(buttons, rows, component, wrapper, cardContainer,texta
     let tabKey = buttons[14]
     let backspaceKey = buttons[13]
     let capsLockKey = buttons[29];
-    window.onload = function() {
-       
-        textarea.addEventListener("blur", function(event) {
-          event.preventDefault();
-          textarea.focus();
-        });
-      };
     
-
     buttons.forEach(button => {
         if(button.classList.value === 'keyboard__key'){
         button.addEventListener('mousedown', function(e){
-          let key = keys.find(item => item.key === button.innerText);
+          let key = keys.find(item => item.key === button.innerText.toLowerCase());
           if(capsLockKey.classList.contains('active')){
             textarea.value += key.key.toUpperCase();
           } else {
@@ -35,7 +27,23 @@ export function getEvents(buttons, rows, component, wrapper, cardContainer,texta
     } });
       
       capsLockKey.addEventListener('click', function(e){
+        if( capsLockKey.classList.contains('active') === false) {
+        buttons.forEach(button => {
+          if(button.classList.value === 'keyboard__key'){
+          let key = keys.find(item => item.key == button.innerText);
+          button.innerText = key.key.toUpperCase();
+          } 
+        }); 
+      }  else if( capsLockKey.classList.contains('active') === true) {
+        buttons.forEach(button => {
+          if(button.classList.value === 'keyboard__key'){
+          let key = keys.find(item => item.key == button.innerText.toLowerCase());
+          button.innerText = key.key.toLowerCase();
+          } 
+        }); 
+      }  
         capsLockKey.classList.toggle('active');
+        
       });
       
       spaceKey.addEventListener('mousedown', function(e){
@@ -119,15 +127,33 @@ export function getEvents(buttons, rows, component, wrapper, cardContainer,texta
 window.addEventListener('keydown', function(e){
     for(let i = 0; i< buttons.length; i++) {
         if(e.key === buttons[i].innerText.toLowerCase() || e.key === buttons[i].innerText.toUpperCase()){
-            let key = keys.find(item => item.key === buttons[i].innerText);
+            let key = keys.find(item => item.key === buttons[i].innerText.toLowerCase());
             if(capsLockKey.classList.contains('active')){
-            textarea.value += key.key.toUpperCase()} 
+            textarea.value += key.key.toUpperCase()
+            
+            } 
             else { textarea.value += key.key}
             buttons[i].classList.add('active')
         }
         
         if(e.code == 'CapsLock') {
+          if( capsLockKey.classList.contains('active') === false) {
+            buttons.forEach(button => {
+              if(button.classList.value === 'keyboard__key'){
+              let key = keys.find(item => item.key == button.innerText);
+              button.innerText = key.key.toUpperCase();
+              } 
+            }); 
+          }  else if( capsLockKey.classList.contains('active') === true) {
+            buttons.forEach(button => {
+              if(button.classList.value === 'keyboard__key'){
+              let key = keys.find(item => item.key == button.innerText.toLowerCase());
+              button.innerText = key.key.toLowerCase();
+              } 
+            }); 
+          }  
             capsLockKey.classList.toggle('active')
+          
         }
         if(e.code == 'Space') {
             spaceKey.classList.add('active')
@@ -235,5 +261,4 @@ window.addEventListener('keyup', function(e){
         },200)
     }
 })
-
 }
