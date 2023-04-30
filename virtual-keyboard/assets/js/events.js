@@ -124,13 +124,19 @@ export function getEvents(buttons, rows, component, wrapper, cardContainer,texta
        
       });
 
+
+      
+
 window.addEventListener('keydown', function(e){
     for(let i = 0; i< buttons.length; i++) {
+      if(shiftLeftKey.classList.contains('active') || shiftRightKey.classList.contains('active')){
         if(e.key === buttons[i].innerText.toLowerCase() || e.key === buttons[i].innerText.toUpperCase()){
+      let key = keys.find(item => item.altKey === buttons[i].innerText.toLowerCase());
+      textarea.value += key.altKey;}}
+      else if(e.key === buttons[i].innerText.toLowerCase() || e.key === buttons[i].innerText.toUpperCase()){
             let key = keys.find(item => item.key === buttons[i].innerText.toLowerCase());
             if(capsLockKey.classList.contains('active')){
             textarea.value += key.key.toUpperCase()
-            
             } 
             else { textarea.value += key.key}
             buttons[i].classList.add('active')

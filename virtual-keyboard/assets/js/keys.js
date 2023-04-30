@@ -39,13 +39,13 @@ export const keys = [
     "key": "6",
     "class": "keyboard__key",
     "tag": "div",
-    "altKey": ":",
+    "altKey": "^",
 },
 {
     "key": "7",
     "class": "keyboard__key",
     "tag": "div",
-    "altKey": "?",
+    "altKey": "&",
 },
 {
     "key": "8",
