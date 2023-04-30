@@ -13,7 +13,7 @@ export function getEvents(buttons, rows, component, wrapper, cardContainer,texta
     let backspaceKey = buttons[13]
     let capsLockKey = buttons[29];
     window.onload = function() {
-        textarea.focus();
+       
         textarea.addEventListener("blur", function(event) {
           event.preventDefault();
           textarea.focus();
