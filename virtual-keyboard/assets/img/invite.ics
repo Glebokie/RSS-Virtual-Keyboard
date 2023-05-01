@@ -1,0 +1,42 @@
+BEGIN:VCALENDAR
+PRODID:-//Google Inc//Google Calendar 70.9054//EN
+VERSION:2.0
+CALSCALE:GREGORIAN
+METHOD:REQUEST
+BEGIN:VTIMEZONE
+TZID:Europe/Minsk
+X-LIC-LOCATION:Europe/Minsk
+BEGIN:STANDARD
+TZOFFSETFROM:+0300
+TZOFFSETTO:+0300
+TZNAME:+03
+DTSTART:19700101T000000
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+DTSTART;TZID=Europe/Minsk:20230427T180000
+DTEND;TZID=Europe/Minsk:20230427T190000
+DTSTAMP:20230426T143432Z
+ORGANIZER;CN=konon.angelina@gmail.com:mailto:konon.angelina@gmail.com
+UID:3r5l1ondu1h5jhsqg72lt6gp7t@google.com
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=ACCEPTED;RSVP=TRUE
+ ;CN=konon.angelina@gmail.com;X-NUM-GUESTS=0:mailto:konon.angelina@gmail.com
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION;RSVP=
+ TRUE;CN=savostyk777@gmail.com;X-NUM-GUESTS=0:mailto:savostyk777@gmail.com
+X-GOOGLE-CONFERENCE:https://meet.google.com/fbs-beoh-qbr
+X-MICROSOFT-CDO-OWNERAPPTID:1151101965
+CREATED:20230426T134552Z
+DESCRIPTION:-::~:~::~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~
+ :~:~:~:~:~:~:~:~::~:~::-\nПрисоединиться через Google Meet: https://meet.go
+ ogle.com/fbs-beoh-qbr.\n\nПодробнее о Google Meet по ссылке: https://suppor
+ t.google.com/a/users/answer/9282720\n\nНе изменяйте данные в этом разделе.\
+ n-::~:~::~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:
+ ~:~:~::~:~::-
+LAST-MODIFIED:20230426T143431Z
+LOCATION:
+SEQUENCE:1
+STATUS:CONFIRMED
+SUMMARY:RD&Глеб Савостюк
+TRANSP:OPAQUE
+END:VEVENT
+END:VCALENDAR

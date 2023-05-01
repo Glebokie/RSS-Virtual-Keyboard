@@ -1,0 +1,151 @@
+@charset "UTF-8";
+/*Обнуление*/
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+  font-size: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/*--------------------*/
+.keyboard {
+  transition: 0.2s;
+}
+.keyboard__wrapper {
+  max-width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+.keyboard__container {
+  background-color: #555555;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  row-gap: 5px;
+  padding: 10px 10px;
+  max-width: 100%;
+}
+.keyboard__row {
+  display: flex;
+  justify-content: space-around;
+  gap: 5px;
+}
+.keyboard__key {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1 1;
+  background-color: #ffffff;
+  height: 30px;
+  padding: 5px;
+  border-radius: 3%;
+  transition: 0.2s;
+}
+.keyboard__key_space {
+  flex-grow: 6.5;
+}
+.keyboard__textarea {
+  outline: none;
+  max-width: 100%;
+  transition: 0.2s;
+}
+
+.keyboard__key.active {
+  outline: 3px solid #7bff00;
+  outline-offset: -3px;
+  color: #7bff00;
+}
+
+.keyboard__key.remove {
+  animation: keys_animation 0.5s linear;
+}
+
+@keyframes keys_animation {
+  0% {
+    outline: 3px solid #7bff00;
+    outline-offset: -3px;
+    color: #7bff00;
+  }
+  100% {
+    outline: none;
+    outline-offset: 0;
+    color: #000;
+  }
+}
+.keyboard__span_alt {
+  display: none;
+}
+
+.keyboard__span_alt.active {
+  display: block;
+}
+
+.keyboard__span_alt + .keyboard__span.remove {
+  display: none;
+}

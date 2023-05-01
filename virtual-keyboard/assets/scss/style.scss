@@ -1,0 +1,89 @@
+// remove default styles
+@import "nullstyle.scss";
+//
+
+.keyboard {
+	transition: .2s;
+&__wrapper{
+	max-width: 100%;
+	overflow: hidden;
+	position: relative;
+}
+
+&__container{
+	background-color: #555555;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	row-gap: 5px;
+	padding: 10px 10px;
+	max-width: 100%;
+	
+}
+
+&__row{
+	display: flex;
+	justify-content:space-around;
+	gap: 5px;
+}
+
+&__key{
+	cursor: pointer;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex: 1 1;
+	background-color: #ffffff;
+	//min-width: 30px;
+	height: 30px;
+	padding: 5px;
+	border-radius:3%;
+	transition: .2s;
+	
+	&_space{
+	flex-grow: 6.5;
+		
+	}
+}
+
+&__textarea{
+	outline: none;
+	max-width: 100%;
+	transition: .2s;
+	
+}
+
+}
+
+.keyboard__key.active{
+	outline: 3px solid #7bff00;
+	outline-offset: -3px;
+	color: #7bff00;
+}
+.keyboard__key.remove{
+	animation: keys_animation 0.5s linear ;
+}
+
+@keyframes keys_animation {
+	0% {
+		outline: 3px solid #7bff00;
+		outline-offset: -3px;
+		color: #7bff00;
+	}
+	100% {
+		outline: none;
+		outline-offset: 0;
+		color: #000;
+	}
+}
+
+.keyboard__span_alt{
+	display: none;
+}
+.keyboard__span_alt.active{
+	display: block;
+}
+
+.keyboard__span_alt + .keyboard__span.remove {
+	display: none;
+  }
